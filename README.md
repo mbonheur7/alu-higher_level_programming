@@ -1,2 +1,2 @@
 # alu-higher_level_programming
-none
+This is my first pyhton program!
