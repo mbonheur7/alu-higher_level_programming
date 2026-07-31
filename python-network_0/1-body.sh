@@ -1,3 +1,3 @@
 #!/bin/bash
-# Sends a GET request to a URL and displays the body if the status code is 200
-response=$(curl -s -w "%{http_code}" "$1"); [ "${response: -3}" = "200" ] && echo "${response::-3}"
+# Sends a GET request to a URL and displays the body of a 200 response
+curl -sL -w "%{http_code}" "$1" | sed '$s/200$//'
